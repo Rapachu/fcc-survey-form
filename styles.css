@@ -1,0 +1,119 @@
+:root {
+    --xlarge-font: 1.5rem;
+    --background-color: blue;
+    --form-background-color: rgba(21, 21, 80, 0.759);
+    --constant-height: 3rem;
+    --text-color: white;
+    --text-padding: 5px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+}
+body::before{
+    content: '';
+    background: linear-gradient(180deg, rgba(6, 6, 49, 0.8), rgba(205, 205, 255, 0.7)), url("question_marks_background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.top-bottom-margin {
+    margin: 20px 0px 10px 0px;
+}
+
+label {
+    font-weight: 600;
+    font-size: var(--xlarge-font);
+}
+
+.multiselect-inputs label {
+    margin: 0px;
+}
+
+.multiselect-inputs label input {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: var(--text-padding);
+    height: var(--constant-height);
+}
+
+input,
+select,
+button,
+form {
+    border-radius: 4px;
+}
+
+form {
+    background-color: var(--form-background-color);
+    width: 50rem;
+    padding: 0px 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.multiselect-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+#title-container {
+    margin: 20px;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-items: center;
+    pointer-events: none;
+    font-size: 1.5rem;
+}
+
+button {
+    height: var(--constant-height);
+    background-color: rgb(83, 174, 83);
+    border: none;
+    color: var(--text-color);
+}
+
+button:hover {
+    background-color: rgb(54, 113, 54);
+}
+#free-speak{
+    padding: var(--text-padding);
+    border-radius: 4px;
+}
+@media screen and (max-width: 800px) {
+    form {
+        width: 600px;
+    }
+}
+@media screen and (max-width: 600px) {
+    form {
+        width: 300px;
+    }
+}

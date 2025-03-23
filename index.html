@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="title-container">
+        <h1 id="title">Practicing Survey</h1>
+        <p id="description">This survey is made just for practicing purposes</p>
+    </div>
+    <!-- <div style="position: absolute; height: 100%; width: 100vw; background-color: rgba(23, 10, 74, 0.671); z-index: 1;"></div> -->
+    <form id="survey-form" action="/#">
+        <label id="name-label" for="name" class="top-bottom-margin">Name</label>
+        <input type="text" id="name" required placeholder="first and last name">
+        <label id="email-label" for="email" class="top-bottom-margin">Email</label>
+        <input type="email" id="email" required placeholder="example@example.com">
+        <label id="number-label" for="name" class="top-bottom-margin">Number</label>
+        <input type="number" id="number" min="1" max="10" required placeholder="123456789">
+        <label for="dropdown" class="top-bottom-margin">Select one</label>
+        <select id="dropdown" required>
+            <option disabled selected>Select one</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+        </select>
+        <label class="top-bottom-margin">Choose one</label>
+        <div class="multiselect-inputs" style="margin-bottom: 20px;">
+            <label for="radio-yes"><input type="radio" id="radio-yes" name="radio-options" value="Yes">Yes</label>
+            <label for="radio-no"><input type="radio" id="radio-no" name="radio-options" value="No">No</label>
+            <label for="radio-maybe"><input type="radio" id="radio-maybe" name="radio-options"
+                    value="Maybe">Maybe</label>
+        </div>
+        <label class="top-bottom-margin">Choose many</label>
+        <div class="multiselect-inputs">
+            <label><input type="checkbox" value="books">Books</label>
+            <label><input type="checkbox" value="tv">Tv</label>
+            <label><input type="checkbox" value="games">Games</label>
+            <label><input type="checkbox" value="working">Working</label>
+        </div>
+        <label class="top-bottom-margin">Something to say?</label>
+        <textarea id="free-speak" name="free-speak" rows="10" cols="30"></textarea>
+        <button type="submit" class="top-bottom-margin">Submit</button>
+    </form>
+</body>
+
+</html>
